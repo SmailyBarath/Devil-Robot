@@ -21,7 +21,7 @@ else:
 class AntiSpam:
     def __init__(self):
         self.whitelist = (
-            (DEV_USERS or []).union(INSPECTOR or []).union(ENFORCER or [])
+            DEV_USERS, INSPECTOR, ENFORCER
         )
         # Values are HIGHLY experimental, its recommended you pay attention to our commits as we will be adjusting the values over time with what suits best.
         Duration.CUSTOM = 15  # Custom duration, 15 seconds
